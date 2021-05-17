@@ -35,12 +35,12 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.sass"],
             "scripts": [],
-            "aot": false,
+            "aot": true,
             "vendorChunk": true,
             "extractLicenses": false,
-            "buildOptimizer": false,
+            "buildOptimizer": true,
             "sourceMap": true,
-            "optimization": false,
+            "optimization": true,
             "namedChunks": true
           },
           "configurations": {
@@ -48,8 +48,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "3mb",
-                  "maximumError": "4mb"
+                  "maximumWarning": "400kb",
+                  "maximumError": "1mb"
                 },
                 {
                   "type": "anyComponentStyle",
