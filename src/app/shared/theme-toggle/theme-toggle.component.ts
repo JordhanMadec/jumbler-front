@@ -1,6 +1,5 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import { Subscription } from 'rxjs';
 import { ThemeService } from '../theme.service';
 
 @Component({
@@ -8,28 +7,12 @@ import { ThemeService } from '../theme.service';
   templateUrl: './theme-toggle.component.html',
   styleUrls: ['./theme-toggle.component.sass'],
 })
-export class ThemeToggleComponent implements OnInit, OnDestroy {
-  public isDark = false;
-
-  private subscriptions: Subscription[] = [];
-
+export class ThemeToggleComponent implements OnInit {
   constructor(private readonly themeService: ThemeService) {}
 
-  ngOnInit(): void {
-    const themeSubscription = this.themeService.isDark$.subscribe((value) => {
-      this.isDark = value;
-    });
+  ngOnInit(): void {}
 
-    this.subscriptions.push(themeSubscription);
-  }
-
-  ngOnDestroy(): void {
-    this.subscriptions.forEach(
-      (subscription) => subscription && subscription.unsubscribe()
-    );
-  }
-
-  public toggleDark(): void {
-    this.themeService.setDark(!this.isDark);
+  public setDark(value: boolean): void {
+    this.themeService.setDark(value);
   }
 }

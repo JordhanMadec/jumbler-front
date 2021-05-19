@@ -1,1 +1,28 @@
-<p>dashboard works!</p>
+<div class="h-full flex-1 flex flex-col transition-colors duration-200">
+  <div class="flex justify-end p-4">
+    <app-theme-toggle></app-theme-toggle>
+  </div>
+
+  <div class="flex-1 p-4 flex justify-center items-center">
+    <button
+      (click)="logout()"
+      class="p-4 mr-2 rounded-md bg-error-500 text-white"
+    >
+      Déconnexion
+    </button>
+  </div>
+
+  <div class="flex justify-end p-4">
+    <div
+      class="
+        font-bold
+        text-3xl text-transparent
+        bg-clip-text bg-gradient-to-tr
+        from-primary-500
+        to-secondary-400
+      "
+    >
+      Jumbler
+    </div>
+  </div>
+</div>

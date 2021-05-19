@@ -5,15 +5,14 @@
     p-1
     rounded-full
     font-bold
-    cursor-pointer
     bg-gray-200
     dark:bg-gray-800
     transition-colors
     duration-200
   "
-  (click)="toggleDark()"
 >
   <div
+    (click)="setDark(false)"
     class="
       flex
       items-center
@@ -28,6 +27,7 @@
       dark:text-gray-500
       dark:hover:text-secondary-500
       dark:hover:bg-gray-900
+      cursor-pointer
       transition-colors
       duration-200
     "
@@ -36,6 +36,7 @@
   </div>
 
   <div
+    (click)="setDark(true)"
     class="
       flex
       items-center
@@ -51,6 +52,7 @@
       hover:text-primary-500
       hover:bg-gray-300
       dark:hover:bg-gray-50
+      cursor-pointer
       transition-colors
       duration-200
     "

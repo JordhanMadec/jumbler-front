@@ -79,7 +79,8 @@
               "browserTarget": "jumbler-front:build:production"
             },
             "development": {
-              "browserTarget": "jumbler-front:build:development"
+              "browserTarget": "jumbler-front:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
